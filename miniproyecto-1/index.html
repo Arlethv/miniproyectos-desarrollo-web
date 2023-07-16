@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ingresos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    <h1 >Calculadora de Ingresos</h1>
+    <p>
+        ¡Bienvenido(a) a la calculadora de ingresos! Con esta herramienta podrás calcular tus ganancias totales,
+        basadas en tu salario mensual y la cantidad de meses que desees. No pierdas la oportunidad de descubrir
+        cuánto podrías ahorrar o ganar en un determinado período. ¡Comienza a utilizar la calculadora ahora mismo!
+    </p> 
+    <form action="" class="needs-validation" novalidate>
+        <h2>Cálculo de Ingresos Mensuales</h2>
+        <h3>Etapa 1: Cálculo de Sueldo Neto Mensual</h3>
+        <div class="form-group row">
+          <label for="moneda" class="col-sm-2 col-form-label">Tipo de Moneda:</label>
+          <div class="col-sm-4">
+            <select class="form-select" id="moneda" required>
+              <option value="">Selecciona una moneda</option>
+              <option value="USD">Dólar estadounidense (USD)</option>
+              <option value="EUR">Euro (EUR)</option>
+              <option value="GBP">Libra esterlina (GBP)</option>
+              <option value="JPY">Yen japonés (JPY)</option>
+              <option value="CAD">Dólar canadiense (CAD)</option>
+              <option value="ARS">Peso argentino (ARS)</option>
+              <option value="BRL">Real brasileño (BRL)</option>
+              <option value="CLP">Peso chileno (CLP)</option>
+              <option value="COP">Peso colombiano (COP)</option>
+              <option value="MXN">Peso mexicano (MXN)</option>
+              <option value="PEN">Sol peruano (PEN)</option>
+              <option value="UYU">Peso uruguayo (UYU)</option>
+              <option value="GTQ">Quetzal (GTQ)</option>
+              <option value="CRC">Colón (CRC)</option>
+              <option value="HNL">Lempira (HNL)</option>
+              <option value="NIO">Córdoba (NIO)</option>
+              <option value="VES">Bolivar (VES)</option>
+              <option value="VES">Dólar beliceño (BZD)</option>
+              <option value="VES">Yuan (CNY)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="salario" class="col-sm-2 col-form-label">Monto del Salario:</label>
+          <div class="col-sm-4 d-flex">
+            <input type="number" name="salario" class="form-control" id="salario" placeholder="Ingresa tu salario" required>
+            <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
+          </div>
+          <div class="col-sm-5">
+            <select class="form-select" id="frecuencia" required>
+              <option value="">Selecciona la frecuencia de pago</option>
+              <option value="Hora">Hora</option>
+              <option value="Dia">Diario</option>
+              <option value="Semana">Semanal</option>
+              <option value="Quincena">Quincenal</option>
+              <option value="Mes">Mensual</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row" id="calculoSalario" style="display: none;">
+            <label for="horas" class="col-sm-2 col-form-label">Cantidad de Horas Trabajada:</label>
+            <div class="col-sm-4">
+              <input type="number" name="horas" class="form-control" id="horas"  required>
+            </div>
+          </div>
+          <div class="form-group row" id="salarioDiario" style="display: none;">
+            <label for="dias" class="col-sm-2 col-form-label">Cantidad de Días Trabajados:</label>
+            <div class="col-sm-4">
+              <input type="number" name="dias" class="form-control" id="dias"  required>
+            </div>
+          </div>
+        <div class="form-group row">
+          <label for="bonos" class="col-sm-2 col-form-label">Ingresos Adicionales:</label>
+          <div class="col-sm-4 d-flex">
+            <input type="number" name="bonos" class="form-control" id="bonos" placeholder="Agrega tus ingresos adicionales." >
+            <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
+          </div>
+          <div class="col-sm-5">
+            <small class="form-text text-muted "><span style="color: red;font-weight: bold;">*</span> Agrega los ingresos que desees que formen parte de calculo de ingresos mensuales, estos pueden ser bonos, premios, comisiones, entre otros.</small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="deducciones" class="col-sm-2 col-form-label">Deducciones:</label>
+          <div class="col-sm-4 d-flex">
+            <input type="number" name="deducciones" class="form-control" id="deducciones" placeholder="Ingresa tus deducciones" required>
+            <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="totalIngresos" class="col-sm-2 col-form-label">Total de Ingresos:</label>
+          <div class="col-sm-4 d-flex">
+            <input type="text" name="totalIngresos" class="form-control" id="totalIngresos" readonly>
+            <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
+          </div>
+        </div>
+        <h3>Etapa 2: Cálculo de Gasto Mensual</h3>
+        <div class="form-group row">
+          <label for="gastos" class="col-sm-2 col-form-label">Gastos:</label>
+          <div class="col-sm-4 d-flex">
+            <input type="number" name="gastos" class="form-control" id="gastos" placeholder="Ingresa tus gastos mensuales" required>
+            <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
+          </div>
+          <div class="col-sm-5">
+            <small class="form-text text-muted"><span style="color: red;font-weight: bold;">*</span> Ingrese el total de tus gastos mensuales, incluyendo alquiler, servicios públicos, alimentos, transporte, etc.</small>
+          </div>
+        </div>
+        
+        <div class="form-group row">
+          <label for="otrosGastos" class="col-sm-2 col-form-label">Otros Gastos:</label>
+          <div class="col-sm-4 d-flex">
+            <input type="number" name="otrosGastos" class="form-control" id="otrosGastos" placeholder="Ingresa tus otros gastos" >
+            <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="totalGastos" class="col-sm-2 col-form-label">Total de Gastos:</label>
+          <div class="col-sm-4 d-flex">
+            <input type="text" name="totalGastos" class="form-control" id="totalGastos" readonly>
+            <div class="tipoMoneda ml-2" style="display: none;" id="monedaGastos">USD</div>
+          </div>
+        </div>
+        <h3>Etapa 3: Resumen Financiero</h3>
+        <div class="form-group row">
+            <label for="ingresosTotales" class="col-sm-4 col-form-label">Total de Ingresos Mensuales:</label>
+            <div class="col-sm-4 d-flex">
+                <input type="text" name="ingresosTotales" class="form-control" id="ingresosTotales" readonly>
+                <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="gastosTotales" class="col-sm-4 col-form-label">Total de Gastos Mensuales:</label>
+            <div class="col-sm-4 d-flex">
+                <input type="text" name="totalGastos" class="form-control" id="gastosTotales" readonly>
+                <div class="tipoMoneda ml-2" style="display: none;" id="tipoMonedaGastos">USD</div>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="balance" class="col-sm-4 col-form-label">Balance Financiero:</label>
+            <div class="col-sm-4 d-flex">
+                <input type="text" name="balance" class="form-control" id="balance" readonly>
+                <div class="tipoMoneda ml-2" style="display: none;" id="tipoMonedaBalance">USD</div>
+            </div>
+        </div>
+        <div id="balanceDescripcion" class="balance-descripcion"></div>
+        <div class="text-center">
+            <button type="button" class="btn-submit" id="boton"  formnovalidate>Calcular</button>
+            <button type="button" class="btn-borrar">Borrar</button>
+        </div>
+        
+      </form>
+      
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="calculoIngresos.js"></script>
+</body>
+</html>
