@@ -1,0 +1,101 @@
+  /* Estilos para el contenido de la página de Cuenta Regresiva */
+
+body{
+  background-position: center;
+  background-size: 100%;
+  color: #FFFFFF;
+  font-family: Arial, sans-serif; 
+  background-image: linear-gradient(to right, #090226, #29024B, #55027C); /* Fondo degradado */
+  height: 100vh;
+  margin: 0;
+  border: linear-gradient(to right, #090226 #29024B,#55027C);}
+
+  .titulo {
+    font-family: "Arial", sans-serif;
+    font-size: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    margin: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+ 
+
+p{
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  
+}
+
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .contenedor div {
+    text-align: center;
+    padding: 20px;
+    background-color: #9C04B2;
+  }
+  
+.cuentaRegresiva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 120px;
+    margin: 10px;
+    border: 2px solid #9C04B2;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #9C04B2 50%, white 50%);
+    background-size: 100% 200%;
+    transition: background-position 1s ease-in-out;
+  }
+  
+  .cuentaRegresiva span {
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .cuentaRegresiva p {
+    margin: 5px 0;
+    font-size: 20px;
+    color: white;;
+  }
+
+  #fecha{
+    color: white;
+    margin: 50px;
+    font-size: 20px;
+  
+  }
+
+  h2{
+    font-family: "Arial", sans-serif;
+    font-size: 95px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    margin: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  }
+
+  h2 {
+    background-color: #fdc500;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+  }
+  
