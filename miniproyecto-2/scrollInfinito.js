@@ -68,3 +68,4 @@ function scrollInfinito() {
 // Capturar el evento scroll por parte del usuario
 window.addEventListener("scroll", scrollInfinito);
 
+document.addEventListener("DOMContentLoaded",cargarImagenes())

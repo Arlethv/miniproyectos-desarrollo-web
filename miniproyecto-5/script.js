@@ -68,3 +68,6 @@ document.getElementById('btnGrabar').addEventListener('click', () => {
     }
 });
 
+document.getElementById('btnBorrar').addEventListener('click', function() {
+    document.getElementById('resultado').value = ''; 
+  });

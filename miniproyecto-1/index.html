@@ -17,7 +17,7 @@
     <form action="" class="needs-validation" novalidate>
         <h2>Cálculo de Ingresos Mensuales</h2>
         <h3>Etapa 1: Cálculo de Sueldo Neto Mensual</h3>
-        <div class="form-group row">
+        <div class="form-group fila">
           <label for="moneda" class="col-sm-2 col-form-label">Tipo de Moneda:</label>
           <div class="col-sm-4">
             <select class="form-select" id="moneda" required>
@@ -44,13 +44,13 @@
             </select>
           </div>
         </div>
-        <div class="form-group row">
+        <div class="form-group fila">
           <label for="salario" class="col-sm-2 col-form-label">Monto del Salario:</label>
           <div class="col-sm-4 d-flex">
             <input type="number" name="salario" class="form-control" id="salario" placeholder="Ingresa tu salario" required>
             <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
           </div>
-          <div class="col-sm-5">
+          <div class="col-sm-5" style="margin-left: 20px;">
             <select class="form-select" id="frecuencia" required>
               <option value="">Selecciona la frecuencia de pago</option>
               <option value="Hora">Hora</option>
@@ -61,19 +61,19 @@
             </select>
           </div>
         </div>
-        <div class="form-group row" id="calculoSalario" style="display: none;">
+        <div class="form-group fila" id="calculoSalario" style="display: none;">
             <label for="horas" class="col-sm-2 col-form-label">Cantidad de Horas Trabajada:</label>
             <div class="col-sm-4">
               <input type="number" name="horas" class="form-control" id="horas"  required>
             </div>
           </div>
-          <div class="form-group row" id="salarioDiario" style="display: none;">
+          <div class="form-group fila" id="salarioDiario" style="display: none;">
             <label for="dias" class="col-sm-2 col-form-label">Cantidad de Días Trabajados:</label>
             <div class="col-sm-4">
               <input type="number" name="dias" class="form-control" id="dias"  required>
             </div>
           </div>
-        <div class="form-group row">
+        <div class="form-group fila">
           <label for="bonos" class="col-sm-2 col-form-label">Ingresos Adicionales:</label>
           <div class="col-sm-4 d-flex">
             <input type="number" name="bonos" class="form-control" id="bonos" placeholder="Agrega tus ingresos adicionales." >
@@ -83,14 +83,14 @@
             <small class="form-text text-muted "><span style="color: red;font-weight: bold;">*</span> Agrega los ingresos que desees que formen parte de calculo de ingresos mensuales, estos pueden ser bonos, premios, comisiones, entre otros.</small>
           </div>
         </div>
-        <div class="form-group row">
+        <div class="form-group fila">
           <label for="deducciones" class="col-sm-2 col-form-label">Deducciones:</label>
           <div class="col-sm-4 d-flex">
             <input type="number" name="deducciones" class="form-control" id="deducciones" placeholder="Ingresa tus deducciones" required>
             <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
           </div>
         </div>
-        <div class="form-group row">
+        <div class="form-group fila">
           <label for="totalIngresos" class="col-sm-2 col-form-label">Total de Ingresos:</label>
           <div class="col-sm-4 d-flex">
             <input type="text" name="totalIngresos" class="form-control" id="totalIngresos" readonly>
@@ -98,7 +98,7 @@
           </div>
         </div>
         <h3>Etapa 2: Cálculo de Gasto Mensual</h3>
-        <div class="form-group row">
+        <div class="form-group fila">
           <label for="gastos" class="col-sm-2 col-form-label">Gastos:</label>
           <div class="col-sm-4 d-flex">
             <input type="number" name="gastos" class="form-control" id="gastos" placeholder="Ingresa tus gastos mensuales" required>
@@ -109,14 +109,14 @@
           </div>
         </div>
         
-        <div class="form-group row">
+        <div class="form-group fila">
           <label for="otrosGastos" class="col-sm-2 col-form-label">Otros Gastos:</label>
           <div class="col-sm-4 d-flex">
             <input type="number" name="otrosGastos" class="form-control" id="otrosGastos" placeholder="Ingresa tus otros gastos" >
             <div class="tipoMoneda ml-2" style="display: none;" id="tipoMoneda">USD</div>
           </div>
         </div>
-        <div class="form-group row">
+        <div class="form-group fila">
           <label for="totalGastos" class="col-sm-2 col-form-label">Total de Gastos:</label>
           <div class="col-sm-4 d-flex">
             <input type="text" name="totalGastos" class="form-control" id="totalGastos" readonly>
@@ -124,7 +124,7 @@
           </div>
         </div>
         <h3>Etapa 3: Resumen Financiero</h3>
-        <div class="form-group row">
+        <div class="form-group fila">
             <label for="ingresosTotales" class="col-sm-4 col-form-label">Total de Ingresos Mensuales:</label>
             <div class="col-sm-4 d-flex">
                 <input type="text" name="ingresosTotales" class="form-control" id="ingresosTotales" readonly>
@@ -132,7 +132,7 @@
             </div>
         </div>
     
-        <div class="form-group row">
+        <div class="form-group fila">
             <label for="gastosTotales" class="col-sm-4 col-form-label">Total de Gastos Mensuales:</label>
             <div class="col-sm-4 d-flex">
                 <input type="text" name="totalGastos" class="form-control" id="gastosTotales" readonly>
@@ -140,7 +140,7 @@
             </div>
         </div>
     
-        <div class="form-group row">
+        <div class="form-group fila">
             <label for="balance" class="col-sm-4 col-form-label">Balance Financiero:</label>
             <div class="col-sm-4 d-flex">
                 <input type="text" name="balance" class="form-control" id="balance" readonly>

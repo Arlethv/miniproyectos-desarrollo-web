@@ -5,7 +5,7 @@ body{
   background-size: 100%;
   color: #FFFFFF;
   font-family: Arial, sans-serif; 
-  background-image: linear-gradient(to right, #090226, #29024B, #55027C); /* Fondo degradado */
+  background-image: linear-gradient(to right, #090226, #29024B, #55027C);
   height: 100vh;
   margin: 0;
   border: linear-gradient(to right, #090226 #29024B,#55027C);}
@@ -32,6 +32,9 @@ p{
   
 }
 
+h1 .titulo{
+  margin-top: 40px;
+}
   .contenedor {
     display: flex;
     justify-content: center;

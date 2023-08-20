@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Scroll Infinito</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -33,7 +33,7 @@
   </main>
 
   <div class="container mt-5">
-    <div class="fila" id="galeria">
+    <div class="row" id="galeria">
       <div class="col-md-4 mb-4">
         <div class="card">
           <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" class="card-img-top imagen" alt="Imagen 1">
@@ -118,11 +118,14 @@
           </div>
         </div>
       </div>
-          <div class="fila" id="gallery">
-          </div>
-          <div id="loading" class="text-center d-flex justify-content-center align-items-center" style="display: none;">
-            <div class="cargando" ></div>
-          </div>
+      <div class="container mt-5">
+        <div class="row" id="gallery">
+        </div>
+        <div id="loading" class="text-center d-flex justify-content-center align-items-center" style="display: none;">
+          <div class="cargando"></div>
+        </div>
+      </div>
+      
     </div>
   </div>
       

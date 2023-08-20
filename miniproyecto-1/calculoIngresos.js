@@ -143,7 +143,7 @@ otrosGastos.addEventListener('change',gastosTotales);
         totalGasto.value=gasto;
         ingresosTotales.value=ingreso;
     }
-
+    balanceDescripcion.style.display = "block";
     let descripcionBalance;
     if (balances > 0) {
         descripcionBalance ="Superávit Financiero: Los ingresos superan los gastos.";
@@ -170,6 +170,8 @@ btnBorrar.addEventListener("click", function() {
     
   const validacion = document.querySelector('.needs-validation');
     validacion.classList.remove('was-validated');
+    balanceDescripcion.style.display = "none";
+   
 
   // Borrar los datos ingresados
   formulario.reset();
